@@ -195,9 +195,9 @@ namespace CourseExam
                         Console.WriteLine(array[N - i - 1]);
                 }
         }
-    }
 
-    static void Array47()
+
+        static void Array47()
         {
             int N = int.Parse(Console.ReadLine());
             int[] array = new int[N];

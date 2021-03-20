@@ -9,7 +9,7 @@ namespace CourseExam
     {
         public static void Main(string[] args)
         {
-            Array110();
+            Array76();
         }
 
         static void For12()
@@ -255,6 +255,16 @@ namespace CourseExam
 
             for (int i = 0; i < N; i++)
             {
+                if (i == 0 && array[i] > array[i + 1])
+                {
+                    localMinIndexes.Add(i);
+                    continue;
+                }
+                if (i == N-1 && array[i] > array[i - 1])
+                {
+                    localMinIndexes.Add(i);
+                    continue;
+                }
                 if (array[i] > array[Clamp(i - 1,0,N-1)] && array[i] > array[Clamp(i + 1,0,N-1)])
                 {
                     localMinIndexes.Add(i);

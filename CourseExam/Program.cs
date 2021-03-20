@@ -9,7 +9,7 @@ namespace CourseExam
     {
         public static void Main(string[] args)
         {
-            Array76();
+            Array16();
         }
 
         static void For12()
@@ -21,6 +21,7 @@ namespace CourseExam
                 double curValue = double.Parse("1." + i);
                 ans *= curValue;
             }
+
             Console.WriteLine(ans);
         }
 
@@ -34,7 +35,7 @@ namespace CourseExam
                 cachedMul *= i;
                 ans += cachedMul;
             }
-            
+
             Console.WriteLine(ans);
         }
 
@@ -54,6 +55,7 @@ namespace CourseExam
                 Console.WriteLine(a_new);
             }
         }
+
         static void While4()
         {
             int N = int.Parse(Console.ReadLine());
@@ -61,8 +63,8 @@ namespace CourseExam
             {
                 N /= 3;
             }
-            
-            if(N == 1)
+
+            if (N == 1)
                 Console.WriteLine("TRUE");
             else
                 Console.WriteLine("FALSE");
@@ -78,8 +80,10 @@ namespace CourseExam
                 sum += counter;
                 counter++;
             }
-            Console.WriteLine(counter-2);
+
+            Console.WriteLine(counter - 2);
         }
+
         static void While23()
         {
             int A = int.Parse(Console.ReadLine());
@@ -144,6 +148,7 @@ namespace CourseExam
                     return true;
                 }
             }
+
             return false;
         }
 
@@ -175,15 +180,24 @@ namespace CourseExam
             for (int i = 0; i < N; i++)
                 array[i] = int.Parse(Console.ReadLine());
 
-            for (int i = 0; i < N / 2 + 1; i++)
-            {
-                Console.WriteLine(array[i]);
-                if (i != N - 1 - i)
-                    Console.WriteLine(array[N - i - 1]);
-            }
+            if (N % 2 == 1)
+                for (int i = 0; i < N / 2 + 1; i++)
+                {
+                    Console.WriteLine(array[i]);
+                    if (i != N - 1 - i)
+                        Console.WriteLine(array[N - i - 1]);
+                }
+            else
+                for (int i = 0; i < N / 2 + 1; i++)
+                {
+                    Console.WriteLine(array[i]);
+                    if (i != N - 1 - i)
+                        Console.WriteLine(array[N - i - 1]);
+                }
         }
-        
-        static void Array47()
+    }
+
+    static void Array47()
         {
             int N = int.Parse(Console.ReadLine());
             int[] array = new int[N];
